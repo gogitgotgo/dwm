@@ -6,6 +6,7 @@ static const unsigned int gappx     = 5;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const Bool viewontag     = True;     /* Switch view on tag switch*/
 static const char *fonts[]          = { "monospace:size=18", 
 					"WenQuanYi Micro Hei:size=18:style=regular:antialias=true:autohint=true", 
 					"Symbols Nerd Font:pixelsize=22:style=2048-em:antialias=true:autohint=true" }; 
