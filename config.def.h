@@ -5,8 +5,14 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
-static const char dmenufont[]       = "monospace:size=10";
+static const char *fonts[]          = { "monospace:size=18", 
+					"WenQuanYi Micro Hei:size=18:style=regular:antialias=true:autohint=true", 
+					"Symbols Nerd Font:pixelsize=22:style=2048-em:antialias=true:autohint=true" }; 
+static const char dmenufont[]       = "monospace:size=18"; 
+static const char col_gray1[]       = "#665879";
+static const char col_gray2[]       = "#93859f";
+static const char col_gray3[]       = "#d4c4d1";
+static const char col_gray4[]       = "#ffffff";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
@@ -45,7 +51,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
