@@ -71,9 +71,19 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "120x34", NULL };
+static const char *voltoggle[]  = { "/home/willem//dwm/voltoggle.sh", NULL };
+static const char *voldown[]  = { "/home/willem/dwm/voldown.sh", NULL };
+static const char *volup[]  = { "/home/willem/dwm/volup.sh", NULL };
+static const char *lightdown[]  = { "/home/willem/dwm/lightdown.sh", NULL };
+static const char *lightup[]  = { "/home/willem/dwm/lightup.sh", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_F1,     spawn,          {.v = voltoggle } },
+	{ MODKEY,                       XK_F2,     spawn,          {.v = voldown } },
+	{ MODKEY,                       XK_F3,     spawn,          {.v = volup } },
+	{ MODKEY,                       XK_F6,     spawn,          {.v = lightdown } },
+	{ MODKEY,                       XK_F7,     spawn,          {.v = lightup } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
